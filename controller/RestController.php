@@ -571,6 +571,12 @@ class RestController extends Controller
                 'related' => 'skos:related',
                 'inScheme' => 'skos:inScheme',
             );
+
+            // Roundtrip to get @list syntax
+            // https://github.com/NatLibFi/Skosmos/pull/369#issuecomment-161924791
+            $results = \ML\JsonLD\JsonLD::toRdf($results);
+            $results = \ML\JsonLD\JsonLD::fromRdf($results);
+
             $compactJsonLD = \ML\JsonLD\JsonLD::compact($results, json_encode($context));
             $results = \ML\JsonLD\JsonLD::toString($compactJsonLD);
         }

@@ -1,4 +1,9 @@
 FROM docker.pkg.github.com/danmichaelo/skosmos-stack/skosmos-base:latest
+ARG COMPOSER_AUTH
+
+RUN apt-get update && \
+  apt-get -y install zip unzip libzip-dev zlib1g-dev git \
+  && docker-php-ext-install zip
 
 COPY . /var/www/html
 

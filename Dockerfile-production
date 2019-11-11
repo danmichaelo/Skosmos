@@ -1,3 +1,6 @@
 FROM docker.pkg.github.com/danmichaelo/skosmos-stack/skosmos-base:latest
 
 COPY . /var/www/html
+
+RUN curl -sS https://getcomposer.org/installer | php --
+RUN php composer.phar install --no-interaction --no-dev --no-suggest --optimize-autoloader --profile

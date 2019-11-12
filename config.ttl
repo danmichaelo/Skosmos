@@ -81,12 +81,30 @@
     skosmos:language "nb", "nn";
     skosmos:defaultLanguage "nb";
     skosmos:shortName "BIBBI";
-    skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsentno" ;
+    skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
     skosmos:showChangeList "false" ;
     # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
     void:sparqlEndpoint <http://fuseki_cache:80/ds/sparql> ;
     skosmos:sparqlGraph <http://data.bibsent.no/bibsent> ;
     skosmos:mainConceptScheme <http://data.bibsent.no/bibbi/> ;
+.
+
+:webdewey a skosmos:Vocabulary, void:Dataset ;
+    dc:title "Norwegian WebDewey"@en,
+        "Norsk WebDewey"@nn,
+        "Norsk WebDewey"@nb ;
+    dc:subject :cat_general ;
+    void:uriSpace "http://dewey.info/";
+    skosmos:mainConceptScheme <http://dewey.info/scheme/edition/e23/>;
+    skosmos:language "nb";
+    skosmos:defaultLanguage "nb";
+    skosmos:showTopConcepts "true";
+    skosmos:showChangeList "true";
+    skosmos:showStatistics "false" ;
+    skosmos:shortName "DDC";
+    skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
+    void:sparqlEndpoint <http://fuseki_cache:80/ds/sparql> ;
+    skosmos:sparqlGraph <http://data.bibsent.no/webdewey> ;
 .
 
 :categories a skos:ConceptScheme;

@@ -30,7 +30,7 @@
     skosmos:sparqlTimeout 45 ;  # Needed mainly for the vocabularyStatistics call, which can take ~ 30 secs
     skosmos:httpTimeout 5 ;
     # customize the service name
-    skosmos:serviceName "Bibbi autoriteter" ;
+    skosmos:serviceName "Skosmos @ Biblioteksentralen" ;
     # customize the base element. Set this if the automatic base url detection doesn't work. For example setups behind a proxy.
     # skosmos:baseHref "http://fuseki_cache/80/" ;
     # interface languages available, and the corresponding system locales

@@ -21,6 +21,7 @@ RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" $PHP_INI_DIR/php.ini \
 # Override with custom opcache settings
 COPY opcache.ini "$PHP_INI_DIR/conf.d/"
 
+# RUN git clone --depth 1 --branch bibsent https://github.com/danmichaelo/skosmos.git /var/www/html
 COPY . /var/www/html
 
 RUN curl -sS https://getcomposer.org/installer | php --

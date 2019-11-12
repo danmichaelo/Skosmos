@@ -27,7 +27,7 @@
     # whether to enable collation in sparql queries
     skosmos:sparqlCollationEnabled false ;
     # HTTP client configuration
-    skosmos:sparqlTimeout 30 ;
+    skosmos:sparqlTimeout 45 ;  # Needed mainly for the vocabularyStatistics call, which can take ~ 30 secs
     skosmos:httpTimeout 5 ;
     # customize the service name
     skosmos:serviceName "Bibbi autoriteter" ;

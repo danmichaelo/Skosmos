@@ -18,7 +18,7 @@
 :config a skosmos:Configuration ;
     # SPARQL endpoint
     # a local Fuseki server is usually on fuseki:3030
-    skosmos:sparqlEndpoint <http://fuseki:3030/ds/sparql> ;
+    skosmos:sparqlEndpoint <http://fuseki_cache:80/ds/sparql> ;
     # use the dev.finto.fi endpoint where the example vocabularies reside
     # skosmos:sparqlEndpoint <http://api.dev.finto.fi/sparql> ;
     # sparql-query extension, or "Generic" for plain SPARQL 1.1
@@ -27,12 +27,12 @@
     # whether to enable collation in sparql queries
     skosmos:sparqlCollationEnabled false ;
     # HTTP client configuration
-    skosmos:sparqlTimeout 20 ;
+    skosmos:sparqlTimeout 30 ;
     skosmos:httpTimeout 5 ;
     # customize the service name
     skosmos:serviceName "Bibbi autoriteter" ;
     # customize the base element. Set this if the automatic base url detection doesn't work. For example setups behind a proxy.
-    # skosmos:baseHref "http://fuseki/Skosmos/" ;
+    # skosmos:baseHref "http://fuseki_cache/80/" ;
     # interface languages available, and the corresponding system locales
     skosmos:languages (
         [ rdfs:label "nb" ; rdf:value "nb_NO.utf8" ]
@@ -84,7 +84,7 @@
     skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsentno" ;
     skosmos:showChangeList "false" ;
     # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
-    void:sparqlEndpoint <http://fuseki:3030/ds/sparql> ;
+    void:sparqlEndpoint <http://fuseki_cache:80/ds/sparql> ;
     skosmos:sparqlGraph <http://data.bibsent.no/bibsent> ;
     skosmos:mainConceptScheme <http://data.bibsent.no/bibbi/> ;
 .

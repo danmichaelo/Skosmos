@@ -11,6 +11,13 @@ RUN docker-php-ext-configure opcache --enable-opcache \
 # Use the default production configuration
 RUN cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
+# PHP settings
+RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" $PHP_INI_DIR/php.ini \
+	&& sed -i "s/display_startup_errors = Off/display_startup_errors = On/" $PHP_INI_DIR/php.ini \
+	&& sed -i "s/display_errors = Off/display_errors = On/" $PHP_INI_DIR/php.ini \
+	&& sed -i "s/memory_limit = 128M/memory_limit = 348M/" $PHP_INI_DIR/php.ini \
+	&& sed -i "s/file_uploads = On/file_uploads = Off/" $PHP_INI_DIR/php.ini
+
 # Override with custom opcache settings
 COPY opcache.ini "$PHP_INI_DIR/conf.d/"
 

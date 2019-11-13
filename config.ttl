@@ -77,12 +77,14 @@
     dc:subject :cat_general ;
     dc:type mdrtype:TAXONOMY ;
     void:uriSpace "http://data.bibsent.no/bibbi/";
-    skosmos:groupClass skos:Collection;
+    # skosmos:groupClass skos:Collection;
     skosmos:language "nb", "nn";
     skosmos:defaultLanguage "nb";
     skosmos:shortName "BIBBI";
     skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
-    skosmos:showChangeList "false" ;
+    skosmos:showTopConcepts "false";
+    skosmos:showChangeList "true" ;
+    skosmos:showStatistics "true" ;
     # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
     void:sparqlEndpoint <http://fuseki_cache:80/ds/sparql> ;
     skosmos:sparqlGraph <http://data.bibsent.no/bibsent> ;

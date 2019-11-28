@@ -35,6 +35,8 @@
     skosmos:serviceName "Skosmos being tested" ;
     # customize the base element. Set this if the automatic base url detection doesn't work. For example setups behind a proxy.
     skosmos:baseHref "http://tests.localhost/Skosmos/" ;
+    # setting a trusted proxy allows for correct automatic url generation behind a proxy
+    skosmos:trustProxyHeaders true ;
     # interface languages available, and the corresponding system locales
     skosmos:languages ( [ rdfs:label "en" ; rdf:value "en_GB.utf8" ] ) ;
     # how many results (maximum) to load at a time on the search results page
@@ -57,7 +59,7 @@
     skosmos:feedbackSender "tests skosmos" ;
     # email address to set as the envelope sender for feedback messages
     skosmos:feedbackEnvelopeSender "skosmos tests" ;
-    # whether to display the ui language selection as a dropdown (useful for cases where there are more than 3 languages) 
+    # whether to display the ui language selection as a dropdown (useful for cases where there are more than 3 languages)
     skosmos:uiLanguageDropdown true ;
     # whether to enable the spam honey pot or not, enabled by default
     skosmos:uiHoneypotEnabled false ;

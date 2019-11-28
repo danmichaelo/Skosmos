@@ -33,6 +33,7 @@
     skosmos:serviceName "Skosmos @ Biblioteksentralen" ;
     # customize the base element. Set this if the automatic base url detection doesn't work. For example setups behind a proxy.
     # skosmos:baseHref "http://fuseki_cache/80/" ;
+    skosmos:trustProxyHeaders true ;
     # interface languages available, and the corresponding system locales
     skosmos:languages (
         [ rdfs:label "nb" ; rdf:value "nb_NO.utf8" ]
@@ -59,7 +60,7 @@
     skosmos:feedbackSender "" ;
     # email address to set as the envelope sender for feedback messages
     skosmos:feedbackEnvelopeSender "" ;
-    # whether to display the ui language selection as a dropdown (useful for cases where there are more than 3 languages) 
+    # whether to display the ui language selection as a dropdown (useful for cases where there are more than 3 languages)
     skosmos:uiLanguageDropdown false ;
     # whether to enable the spam honey pot or not, enabled by default
     skosmos:uiHoneypotEnabled true ;

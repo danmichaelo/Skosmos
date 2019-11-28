@@ -95,7 +95,7 @@ class GlobalConfig extends BaseConfig {
             $this->initializeNamespaces();
         } catch (Exception $e) {
             echo "Error: " . $e->getMessage();
-        }      
+        }
     }
 
     /**
@@ -355,5 +355,13 @@ class GlobalConfig extends BaseConfig {
     public function getCollationEnabled()
     {
         return $this->getBoolean('skosmos:sparqlCollationEnabled', FALSE);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getTrustProxyHeaders()
+    {
+        return $this->getBoolean('skosmos:trustProxyHeaders', FALSE);
     }
 }

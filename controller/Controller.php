@@ -94,9 +94,14 @@ class Controller
         $base_url = preg_replace("!^{$doc_root}!", '', $base_dir);
         $base_url = str_replace('/controller', '/', $base_url);
         $protocol = filter_input(INPUT_SERVER, 'HTTPS', FILTER_SANITIZE_STRING) === null ? 'http' : 'https';
-        $port = filter_input(INPUT_SERVER, 'SERVER_PORT', FILTER_SANITIZE_STRING);
-        $disp_port = ($port == 80 || $port == 443) ? '' : ":$port";
         $domain = filter_input(INPUT_SERVER, 'SERVER_NAME', FILTER_SANITIZE_STRING);
+        $port = filter_input(INPUT_SERVER, 'SERVER_PORT', FILTER_SANITIZE_STRING);
+        if ($this->model->getConfig()->getTrustProxyHeaders()) {
+            $domain = filter_input(INPUT_SERVER, 'HTTP_X_FORWARDED_HOST', FILTER_SANITIZE_STRING) ?: $domain ;
+            $protocol = filter_input(INPUT_SERVER, 'HTTP_X_FORWARDED_PROTO', FILTER_SANITIZE_STRING) ?: $protocol ;
+            $port = filter_input(INPUT_SERVER, 'HTTP_X_FORWARDED_PORT', FILTER_SANITIZE_STRING) ?: $port ;
+        }
+        $disp_port = ($port == 80 || $port == 443) ? '' : ":$port";
         $full_url = "$protocol://{$domain}{$disp_port}{$base_url}";
         return $full_url;
     }

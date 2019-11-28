@@ -56,6 +56,11 @@ class GlobalConfigTest extends PHPUnit\Framework\TestCase
         $this->assertEquals("http://tests.localhost/Skosmos/", $this->config->getBaseHref());
     }
 
+    public function testGetProxyHeaders()
+    {
+        $this->assertEquals(true, $this->config->getProxyHeaders());
+    }
+
     public function testGetLanguages()
     {
         $this->assertEquals(array('en' => 'en_GB.utf8'), $this->config->getLanguages());

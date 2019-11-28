@@ -3,7 +3,7 @@
   "description": "Thesaurus and controlled vocabulary browser using SKOS and SPARQL",
   "type": "project",
   "license": "MIT",
-  "repositories": { 
+  "repositories": {
     "urijs-unofficial": {
       "type": "package",
       "package": {
@@ -51,7 +51,7 @@
           "reference": "v0.9.13"
         }
       }
-    } 
+    }
   },
   "require": {
     "components/jquery": "2.2.*",

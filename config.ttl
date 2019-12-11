@@ -59,7 +59,7 @@
     skosmos:feedbackSender "" ;
     # email address to set as the envelope sender for feedback messages
     skosmos:feedbackEnvelopeSender "" ;
-    # whether to display the ui language selection as a dropdown (useful for cases where there are more than 3 languages) 
+    # whether to display the ui language selection as a dropdown (useful for cases where there are more than 3 languages)
     skosmos:uiLanguageDropdown false ;
     # whether to enable the spam honey pot or not, enabled by default
     skosmos:uiHoneypotEnabled true ;
@@ -76,7 +76,7 @@
         "Bibbi authorities"@en ;
     dc:subject :cat_general ;
     dc:type mdrtype:TAXONOMY ;
-    void:uriSpace "http://data.bibsent.no/bibbi/";
+    void:uriSpace "http://id.bibbi.dev/";
     # skosmos:groupClass skos:Collection;
     skosmos:language "nb", "nn";
     skosmos:defaultLanguage "nb";
@@ -88,7 +88,7 @@
     # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
     void:sparqlEndpoint <http://fuseki_cache:80/ds/sparql> ;
     skosmos:sparqlGraph <http://data.bibsent.no/bibsent> ;
-    skosmos:mainConceptScheme <http://data.bibsent.no/bibbi/> ;
+    skosmos:mainConceptScheme <http://id.bibbi.dev/> ;
 .
 
 :webdewey a skosmos:Vocabulary, void:Dataset ;

@@ -13,6 +13,11 @@ RUN docker-php-ext-configure opcache --enable-opcache \
 # Set server name so it's not determined from the Host header (which can lead to various host header attacks)
 RUN sed -ri -e "s/^(\s*)#? ?ServerName .*/\1ServerName ${SERVER_NAME}/g" /etc/apache2/sites-available/*.conf
 
+# --------------------------------------------
+
+# Overwrite Apache vhost config
+COPY 000-default.conf /etc/apache2/sites-available/
+
 # Use the default production configuration
 RUN cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 

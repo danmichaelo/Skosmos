@@ -87,7 +87,7 @@
     skosmos:showStatistics "true" ;
     # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
     void:sparqlEndpoint <http://fuseki_cache:80/ds/sparql> ;
-    skosmos:sparqlGraph <http://data.bibsent.no/bibsent> ;
+    skosmos:sparqlGraph <http://graph.bibbi.dev/bibbi> ;
     skosmos:mainConceptScheme <http://id.bibbi.dev/> ;
 .
 
@@ -106,7 +106,7 @@
     skosmos:shortName "DDC";
     skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
     void:sparqlEndpoint <http://fuseki_cache:80/ds/sparql> ;
-    skosmos:sparqlGraph <http://data.bibsent.no/webdewey> ;
+    skosmos:sparqlGraph <http://graph.bibbi.dev/webdewey> ;
 .
 
 :categories a skos:ConceptScheme;

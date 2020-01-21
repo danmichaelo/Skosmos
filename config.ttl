@@ -18,7 +18,7 @@
 :config a skosmos:Configuration ;
     # SPARQL endpoint
     # a local Fuseki server is usually on fuseki:3030
-    skosmos:sparqlEndpoint <http://fuseki_cache:80/ds/sparql> ;
+    skosmos:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;
     # use the dev.finto.fi endpoint where the example vocabularies reside
     # skosmos:sparqlEndpoint <http://api.dev.finto.fi/sparql> ;
     # sparql-query extension, or "Generic" for plain SPARQL 1.1
@@ -32,7 +32,7 @@
     # customize the service name
     skosmos:serviceName "Skosmos @ Biblioteksentralen" ;
     # customize the base element. Set this if the automatic base url detection doesn't work. For example setups behind a proxy.
-    # skosmos:baseHref "http://fuseki_cache/80/" ;
+    # skosmos:baseHref "http://fuseki_cache.svc/8001/" ;
     # interface languages available, and the corresponding system locales
     skosmos:languages (
         [ rdfs:label "nb" ; rdf:value "nb_NO.utf8" ]
@@ -86,7 +86,7 @@
     skosmos:showChangeList "true" ;
     skosmos:showStatistics "true" ;
     # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
-    void:sparqlEndpoint <http://fuseki_cache:80/ds/sparql> ;
+    void:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;
     skosmos:sparqlGraph <http://graph.bibbi.dev/bibbi> ;
     skosmos:mainConceptScheme <http://id.bibbi.dev/> ;
 .
@@ -105,7 +105,7 @@
     skosmos:showStatistics "false" ;
     skosmos:shortName "DDC";
     skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
-    void:sparqlEndpoint <http://fuseki_cache:80/ds/sparql> ;
+    void:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;
     skosmos:sparqlGraph <http://graph.bibbi.dev/webdewey> ;
 .
 

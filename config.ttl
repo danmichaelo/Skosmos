@@ -71,9 +71,9 @@
 # Skosmos vocabularies
 
 :bibbi a skosmos:Vocabulary, void:Dataset ;
-    dc:title "Bibbi autoriteter"@nb,
-        "Bibbi autoriteter"@nn,
-        "Bibbi authorities"@en ;
+    dc:title "Bibbi autoriteter (eksperimentell utgave)"@nb,
+        "Bibbi autoriteter (eksperimentell utgåve)"@nn,
+        "Bibbi authorities (experimental edition)"@en ;
     dc:subject :cat_general ;
     dc:type mdrtype:TAXONOMY ;
     void:uriSpace "http://id.bibbi.dev/";

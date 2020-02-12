@@ -70,13 +70,34 @@
 
 # Skosmos vocabularies
 
-:bibbi a skosmos:Vocabulary, void:Dataset ;
-    dc:title "Bibbi autoriteter (eksperimentell utgave)"@nb,
-        "Bibbi autoriteter (eksperimentell utgåve)"@nn,
-        "Bibbi authorities (experimental edition)"@en ;
+:ex1 a skosmos:Vocabulary, void:Dataset ;
+    dc:title "Bibbi autoriteter (eksperiment 1)"@nb,
+        "Bibbi autoriteter (eksperiment 1)"@nn,
+        "Bibbi authorities (experiment 1)"@en ;
     dc:subject :cat_general ;
     dc:type mdrtype:TAXONOMY ;
-    void:uriSpace "http://id.bibbi.dev/";
+    void:uriSpace "http://id.bibbi.dev/ex1/";
+    # skosmos:groupClass skos:Collection;
+    skosmos:language "nb", "nn";
+    skosmos:defaultLanguage "nb";
+    skosmos:shortName "BIBBI";
+    skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
+    skosmos:showTopConcepts "false";
+    skosmos:showChangeList "true" ;
+    skosmos:showStatistics "true" ;
+    # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
+    void:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;
+    skosmos:sparqlGraph <http://graph.bibbi.dev/ex1> ;
+    skosmos:mainConceptScheme <http://id.bibbi.dev/ex1/> ;
+.
+
+:ex2 a skosmos:Vocabulary, void:Dataset ;
+    dc:title "Bibbi autoriteter (eksperiment 2)"@nb,
+        "Bibbi autoriteter (eksperiment 2)"@nn,
+        "Bibbi authorities (experiment 2)"@en ;
+    dc:subject :cat_general ;
+    dc:type mdrtype:TAXONOMY ;
+    void:uriSpace "http://id.bibbi.dev/ex2/";
     # skosmos:groupClass skos:Collection;
     skosmos:language "nb", "nn";
     skosmos:defaultLanguage "nb";
@@ -87,8 +108,8 @@
     skosmos:showStatistics "true" ;
     # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
     void:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;
-    skosmos:sparqlGraph <http://graph.bibbi.dev/bibbi> ;
-    skosmos:mainConceptScheme <http://id.bibbi.dev/> ;
+    skosmos:sparqlGraph <http://graph.bibbi.dev/ex2> ;
+    skosmos:mainConceptScheme <http://id.bibbi.dev/ex2/> ;
 .
 
 :webdewey a skosmos:Vocabulary, void:Dataset ;

@@ -70,11 +70,10 @@
 
 # Skosmos vocabularies
 
-
-:bibbi a skosmos:Vocabulary, void:Dataset ;
-    dc:title "Bibbi autoriteter"@nb,
-        "Bibbi autoriteter"@nn,
-        "Bibbi authorities"@en ;
+:bibbi-topic a skosmos:Vocabulary, void:Dataset ;
+    dc:title "Bibbi autoriteter: emner"@nb,
+        "Bibbi autoritetar: emne"@nn,
+        "Bibbi authorities: topics"@en ;
     dc:subject :cat_general ;
     dc:type mdrtype:TAXONOMY ;
     void:uriSpace "http://id.bibbi.dev/bibbi/";
@@ -88,9 +87,73 @@
     skosmos:showStatistics "true" ;
     # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
     void:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;
-    skosmos:sparqlGraph <http://graph.bibbi.dev/bibbi> ;
+    skosmos:sparqlGraph <http://graph.bibbi.dev/bibbi-topic> ;
     skosmos:mainConceptScheme <http://id.bibbi.dev/bibbi/> ;
 .
+
+:bibbi-geographic a skosmos:Vocabulary, void:Dataset ;
+    dc:title "Bibbi autoriteter: steder"@nb,
+        "Bibbi autoritetar: stadar"@nn,
+        "Bibbi authorities: places"@en ;
+    dc:subject :cat_general ;
+    dc:type mdrtype:TAXONOMY ;
+    void:uriSpace "http://id.bibbi.dev/bibbi/";
+    # skosmos:groupClass skos:Collection;
+    skosmos:language "nb", "nn";
+    skosmos:defaultLanguage "nb";
+    skosmos:shortName "BIBBI";
+    skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
+    skosmos:showTopConcepts "false";
+    skosmos:showChangeList "true" ;
+    skosmos:showStatistics "true" ;
+    # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
+    void:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;
+    skosmos:sparqlGraph <http://graph.bibbi.dev/bibbi-geographic> ;
+    skosmos:mainConceptScheme <http://id.bibbi.dev/bibbi/> ;
+.
+
+:bibbi-person a skosmos:Vocabulary, void:Dataset ;
+    dc:title "Bibbi autoriteter: personer"@nb,
+        "Bibbi autoritetar: personar"@nn,
+        "Bibbi authorities: persons"@en ;
+    dc:subject :cat_general ;
+    dc:type mdrtype:TAXONOMY ;
+    void:uriSpace "http://id.bibbi.dev/bibbi/";
+    # skosmos:groupClass skos:Collection;
+    skosmos:language "nb", "nn";
+    skosmos:defaultLanguage "nb";
+    skosmos:shortName "BIBBI";
+    skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
+    skosmos:showTopConcepts "false";
+    skosmos:showChangeList "true" ;
+    skosmos:showStatistics "true" ;
+    # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
+    void:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;
+    skosmos:sparqlGraph <http://graph.bibbi.dev/bibbi-person> ;
+    skosmos:mainConceptScheme <http://id.bibbi.dev/bibbi/> ;
+.
+
+:bibbi-corporation a skosmos:Vocabulary, void:Dataset ;
+    dc:title "Bibbi autoriteter: korporasjoner"@nb,
+        "Bibbi autoritetar: korporasjonar"@nn,
+        "Bibbi authorities: corporations"@en ;
+    dc:subject :cat_general ;
+    dc:type mdrtype:TAXONOMY ;
+    void:uriSpace "http://id.bibbi.dev/bibbi/";
+    # skosmos:groupClass skos:Collection;
+    skosmos:language "nb", "nn";
+    skosmos:defaultLanguage "nb";
+    skosmos:shortName "BIBBI";
+    skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
+    skosmos:showTopConcepts "false";
+    skosmos:showChangeList "true" ;
+    skosmos:showStatistics "true" ;
+    # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
+    void:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;
+    skosmos:sparqlGraph <http://graph.bibbi.dev/bibbi-corporation> ;
+    skosmos:mainConceptScheme <http://id.bibbi.dev/bibbi/> ;
+.
+
 
 :ex1 a skosmos:Vocabulary, void:Dataset ;
     dc:title "Bibbi autoriteter (eksperiment 1)"@nb,

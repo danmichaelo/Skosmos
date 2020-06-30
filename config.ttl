@@ -70,6 +70,27 @@
 
 # Skosmos vocabularies
 
+:bs-nasj a skosmos:Vocabulary, void:Dataset ;
+    dc:title "Bibbi nasjonalitetskoder"@nb,
+        "Bibbi nasjonalitetskoder"@nn,
+        "Bibbi nationality codes"@en ;
+    dc:subject :cat_general ;
+    dc:type mdrtype:TAXONOMY ;
+    void:uriSpace "http://id.bibbi.dev/bs-nasj/";
+    # skosmos:groupClass skos:Collection;
+    skosmos:language "nb", "nn";
+    skosmos:defaultLanguage "nb";
+    skosmos:shortName "BS-NASJ";
+    skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
+    skosmos:showTopConcepts "false";
+    skosmos:showChangeList "true" ;
+    skosmos:showStatistics "true" ;
+    # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
+    void:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;
+    skosmos:sparqlGraph <http://graph.bibbi.dev/bs-nasj> ;
+    skosmos:mainConceptScheme <http://id.bibbi.dev/bs-nasj/> ;
+.
+
 :bibbi-emner a skosmos:Vocabulary, void:Dataset ;
     dc:title "Bibbi autoriteter: emner"@nb,
         "Bibbi autoritetar: emne"@nn,

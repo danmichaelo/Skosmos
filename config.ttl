@@ -86,6 +86,7 @@
     skosmos:showTopConcepts "false";
     skosmos:showChangeList "true" ;
     skosmos:showStatistics "true" ;
+    skosmos:marcSourceCode "bs-nasj" ;
     # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
     void:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;
     skosmos:sparqlGraph <http://graph.bibbi.dev/bs-nasj> ;
@@ -107,6 +108,7 @@
     skosmos:showTopConcepts "false";
     skosmos:showChangeList "true" ;
     skosmos:showStatistics "true" ;
+    skosmos:marcSourceCode "bibbi" ;
     # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
     void:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;
     skosmos:sparqlGraph <http://graph.bibbi.dev/bibbi-emner> ;
@@ -128,6 +130,7 @@
     skosmos:showTopConcepts "false";
     skosmos:showChangeList "true" ;
     skosmos:showStatistics "true" ;
+    skosmos:marcSourceCode "bibbi" ;
     # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
     void:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;
     skosmos:sparqlGraph <http://graph.bibbi.dev/bibbi-geografisk> ;
@@ -149,6 +152,7 @@
     skosmos:showTopConcepts "false";
     skosmos:showChangeList "true" ;
     skosmos:showStatistics "true" ;
+    skosmos:marcSourceCode "bibbi" ;
     # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
     void:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;
     skosmos:sparqlGraph <http://graph.bibbi.dev/bibbi-sjanger-form> ;
@@ -170,6 +174,7 @@
     skosmos:showTopConcepts "false";
     skosmos:showChangeList "true" ;
     skosmos:showStatistics "true" ;
+    skosmos:marcSourceCode "bibbi" ;
     # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
     void:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;
     skosmos:sparqlGraph <http://graph.bibbi.dev/bibbi-personer> ;
@@ -191,6 +196,7 @@
     skosmos:showTopConcepts "false";
     skosmos:showChangeList "true" ;
     skosmos:showStatistics "true" ;
+    skosmos:marcSourceCode "bibbi" ;
     # void:dataDump <http://api.finto.fi/download/ysa/ysa-skos.ttl> ;
     void:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;
     skosmos:sparqlGraph <http://graph.bibbi.dev/bibbi-korporasjoner> ;

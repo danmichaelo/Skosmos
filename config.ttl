@@ -82,6 +82,7 @@
     skosmos:defaultLanguage "nb";
     skosmos:shortName "BS-NASJ";
     skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
+    skosmos:fullAlphabeticalIndex "true" ;
     skosmos:showTopConcepts "false";
     skosmos:showChangeList "true" ;
     skosmos:showStatistics "true" ;

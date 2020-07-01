@@ -258,6 +258,7 @@
     skosmos:showTopConcepts "true";
     skosmos:showChangeList "true";
     skosmos:showStatistics "false" ;
+    skosmos:alphabeticalListQualifier skos:notation ;
     skosmos:shortName "DDC";
     skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
     void:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;

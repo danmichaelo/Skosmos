@@ -101,7 +101,7 @@
     dc:subject :cat_general ;
     dc:type mdrtype:TAXONOMY ;
     void:uriSpace "http://id.bibbi.dev/bibbi/";
-    # skosmos:groupClass skos:Collection;
+    skosmos:groupClass skos:Collection;
     skosmos:language "nb", "nn";
     skosmos:defaultLanguage "nb";
     skosmos:shortName "BIBBI";

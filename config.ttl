@@ -104,7 +104,7 @@
     skosmos:groupClass skos:Collection;
     skosmos:language "nb", "nn";
     skosmos:defaultLanguage "nb";
-    skosmos:shortName "BIBBI";
+    skosmos:shortName "Bibbi emner";
     skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
     skosmos:showTopConcepts "false";
     skosmos:showChangeList "true" ;
@@ -127,7 +127,7 @@
     # skosmos:groupClass skos:Collection;
     skosmos:language "nb", "nn";
     skosmos:defaultLanguage "nb";
-    skosmos:shortName "BIBBI";
+    skosmos:shortName "Bibbi geografisk";
     skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
     skosmos:showTopConcepts "false";
     skosmos:showChangeList "true" ;
@@ -150,7 +150,7 @@
     # skosmos:groupClass skos:Collection;
     skosmos:language "nb", "nn";
     skosmos:defaultLanguage "nb";
-    skosmos:shortName "BIBBI";
+    skosmos:shortName "Bibbi sjanger/form";
     skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
     skosmos:showTopConcepts "false";
     skosmos:showChangeList "true" ;
@@ -173,7 +173,7 @@
     # skosmos:groupClass skos:Collection;
     skosmos:language "nb", "nn";
     skosmos:defaultLanguage "nb";
-    skosmos:shortName "BIBBI";
+    skosmos:shortName "Bibbi personer";
     skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
     skosmos:showTopConcepts "false";
     skosmos:showChangeList "true" ;
@@ -196,7 +196,7 @@
     # skosmos:groupClass skos:Collection;
     skosmos:language "nb", "nn";
     skosmos:defaultLanguage "nb";
-    skosmos:shortName "BIBBI";
+    skosmos:shortName "Bibbi korporasjoner";
     skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
     skosmos:showTopConcepts "false";
     skosmos:showChangeList "true" ;
@@ -220,7 +220,7 @@
     # skosmos:groupClass skos:Collection;
     skosmos:language "nb", "nn";
     skosmos:defaultLanguage "nb";
-    skosmos:shortName "BIBBI";
+    skosmos:shortName "EX1";
     skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
     skosmos:showTopConcepts "false";
     skosmos:showChangeList "true" ;
@@ -241,7 +241,7 @@
     # skosmos:groupClass skos:Collection;
     skosmos:language "nb", "nn";
     skosmos:defaultLanguage "nb";
-    skosmos:shortName "BIBBI";
+    skosmos:shortName "EX2";
     skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
     skosmos:showTopConcepts "true";
     skosmos:showChangeList "true" ;
@@ -266,7 +266,7 @@
     skosmos:showStatistics "false" ;
     skosmos:alphabeticalListQualifier skos:notation ;
     skosmos:searchByNotation "true";
-    skosmos:shortName "DDC";
+    skosmos:shortName "WebDewey";
     # skosmos:useModified "true";
     skosmos:feedbackRecipient "Dan.Michael.Heggo@bibsent.no" ;
     void:sparqlEndpoint <http://fuseki_cache.svc:8001/ds/sparql> ;

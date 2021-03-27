@@ -343,7 +343,7 @@ class Model
 
     /**
      * Returns the cached vocabularies.
-     * @return array of Vocabulary dataobjects
+     * @return Vocabulary[]
      */
     public function getVocabularies()
     {

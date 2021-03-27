@@ -1118,4 +1118,45 @@ class RestController extends Controller
                                                         array('changeList' => $simpleChangeList)));
 
     }
+
+    /**
+     * Returns a health check fail response
+     * @param string $output Error details
+     */
+    protected function healthCheckFail($output)
+    {
+        header("HTTP/1.0 503 Service Unavailable");
+        echo json_encode(array(
+            'status' => 'fail',
+            'output' => $output,
+        ));
+    }
+
+    /**
+     * Performs a simple health check and returns a RFC8259 compatible response.
+     * @param Request $request
+     */
+    public function healthCheck(Request $request)
+    {
+        header("Content-type: application/health+json; charset=utf-8");
+        header("Cache-Control: no-store");
+
+        // Check that at least one vocabulary is configured
+        $vocabularies = $this->model->getVocabularies();
+        if (!count($vocabularies)) {
+            return $this->healthCheckFail('No vocabularies configured');
+        }
+
+        // Check that the sparql endpoint for the first vocabulary is available
+        $sparql = $vocabularies[0]->getSparql();
+        try {
+            $sparql->query('SELECT ?s ?p ?o WHERE { ?s ?p ?o } LIMIT 1');
+        } catch (\Exception $exception) {
+            return $this->healthCheckFail($exception->getMessage());
+        }
+
+        echo json_encode(array(
+            'status' => 'pass',
+        ));
+    }
 }

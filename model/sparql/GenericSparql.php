@@ -85,7 +85,7 @@ class GenericSparql {
      * @param string $query SPARQL query to perform
      * @return \EasyRdf\Sparql\Result|\EasyRdf\Graph query result
      */
-    protected function query($query) {
+    public function query($query) {
         $queryId = sprintf("%05d", rand(0, 99999));
         $logger = $this->model->getLogger();
         $logger->info("[qid $queryId] SPARQL query:\n" . $this->generateQueryPrefixes($query) . "\n$query\n");

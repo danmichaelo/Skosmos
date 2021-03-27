@@ -28,6 +28,8 @@ try {
     if (sizeof($parts) < 2 || $parts[1] == "") {
         header("HTTP/1.0 404 Not Found");
         echo ("404 Not Found");
+    } elseif ($parts[1] == 'health') {
+        $controller->healthCheck($request);
     } elseif ($parts[1] == 'vocabularies') {
         $controller->vocabularies($request);
     } elseif ($parts[1] == 'search') {

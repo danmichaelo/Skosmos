@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+CONFIG_FILE=/etc/apache2/sites-available/000-default.conf
+
+if [[ ! -z "${SERVER_NAME+x}" ]]; then
+    # Set server name so it's not determined from the Host header (which can lead to various host header attacks)
+    echo "Server name: $SERVER_NAME"
+    sed -ri -e "s/^(\s*)#? ?ServerName .*/\1ServerName ${SERVER_NAME}/" $CONFIG_FILE
+fi
+
+if [[ ! -z "${SERVER_ADMIN+x}" ]]; then
+    # Set server name so it's not determined from the Host header (which can lead to various host header attacks)
+    echo "Server admin: $SERVER_ADMIN"
+    sed -ri -e "s/^(\s*)#? ?ServerAdmin .*/\1ServerAdmin ${SERVER_ADMIN}/" $CONFIG_FILE
+fi
+
+echo Starting server
+exec docker-php-entrypoint "$@"

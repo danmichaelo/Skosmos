@@ -1,22 +1,8 @@
-FROM registry.gitlab.com/bibsent/skosmos-stack/skosmos_base:latest
-# FROM docker.pkg.github.com/danmichaelo/skosmos-stack/skosmos-base:latest
 ARG COMPOSER_AUTH
-ARG SERVER_NAME=localhost
+ARG BASE_IMAGE=latest
 
-RUN apt-get update && \
-  apt-get -y install zip unzip libzip-dev zlib1g-dev git \
-  && docker-php-ext-install zip
-
-RUN docker-php-ext-configure opcache --enable-opcache \
-    && docker-php-ext-install opcache
-
-# Set server name so it's not determined from the Host header (which can lead to various host header attacks)
-RUN sed -ri -e "s/^(\s*)#? ?ServerName .*/\1ServerName ${SERVER_NAME}/g" /etc/apache2/sites-available/*.conf
-
-# --------------------------------------------
-
-# Overwrite Apache vhost config
-COPY 000-default.conf /etc/apache2/sites-available/
+FROM ${BASE_IMAGE}
+# FROM docker.pkg.github.com/danmichaelo/skosmos-stack/skosmos-base:latest
 
 # Use the default production configuration
 RUN cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"

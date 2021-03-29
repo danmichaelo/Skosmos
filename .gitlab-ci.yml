@@ -1,0 +1,44 @@
+---
+stages:
+  - build
+  - build-prod
+
+default:
+  image: docker:stable
+
+services:
+  - docker:dind
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+build:skosmos_base:
+  stage: build
+  only:
+    - master
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker build .
+        --file Dockerfile
+        --tag $CI_REGISTRY_IMAGE/skosmos_base:$CI_COMMIT_SHA
+        --tag $CI_REGISTRY_IMAGE/skosmos_base:latest
+    - docker push $CI_REGISTRY_IMAGE/skosmos_base:$CI_COMMIT_SHA
+    - docker push $CI_REGISTRY_IMAGE/skosmos_base:latest
+
+build:skosmos:
+  stage: build-prod
+  only:
+    - master
+  needs:
+    - build:skosmos_base
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker build .
+        --file Dockerfile-production
+        --build-arg BASE_IMAGE=$CI_REGISTRY_IMAGE/skosmos_base:$CI_COMMIT_SHA
+        --tag $CI_REGISTRY_IMAGE/skosmos:$CI_COMMIT_SHA
+        --tag $CI_REGISTRY_IMAGE/skosmos:latest
+    - docker push $CI_REGISTRY_IMAGE/skosmos:$CI_COMMIT_SHA
+    - docker push $CI_REGISTRY_IMAGE/skosmos:latest

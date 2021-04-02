@@ -1,3 +1,6 @@
 #service-logo {
 	white-space: nowrap;
 }
+#statistics {
+    max-width: 100%;
+}

@@ -30,7 +30,7 @@
     skosmos:sparqlTimeout 45 ;  # Needed mainly for the vocabularyStatistics call, which can take ~ 30 secs
     skosmos:httpTimeout 5 ;
     # customize the service name
-    skosmos:serviceName "Skosmos @ Biblioteksentralen" ;
+    skosmos:serviceName "Biblioteksentralens vokabulartjeneste" ;
     # customize the base element. Set this if the automatic base url detection doesn't work. For example setups behind a proxy.
     # skosmos:baseHref "http://fuseki_cache.svc/8001/" ;
     # interface languages available, and the corresponding system locales
@@ -60,13 +60,13 @@
     # email address to set as the envelope sender for feedback messages
     skosmos:feedbackEnvelopeSender "" ;
     # whether to display the ui language selection as a dropdown (useful for cases where there are more than 3 languages)
-    skosmos:uiLanguageDropdown false ;
+    skosmos:uiLanguageDropdown true ;
     # whether to enable the spam honey pot or not, enabled by default
     skosmos:uiHoneypotEnabled true ;
     # default time a user must wait before submitting a form
     skosmos:uiHoneypotTime 5 ;
     # plugins to activate for the whole installation (including all vocabularies)
-    skosmos:globalPlugins () .
+    skosmos:globalPlugins ( "skosmos-widget-bibbikatalog" ) .
 
 # Skosmos vocabularies
 

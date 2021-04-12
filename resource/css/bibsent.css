@@ -4,3 +4,34 @@
 #statistics {
     max-width: 100%;
 }
+.frontpage > .welcome-box {
+    width: 400px;
+}
+#counts {
+    max-width: 500px;
+}
+.voclist-right #vocabulary-list {
+    width: calc(100% - 425px) !important;
+}
+
+.topbar-white, .topbar-frontpage {
+    background: white;
+}
+
+/*
+html, body {
+    background: #fff;
+    height: 100%;
+}
+html {
+    overflow-y: scroll;
+}
+.topbar-white {
+    background-color: #d5dbde;
+}
+
+.main-container {
+    border-right: 1px solid #eaecef;
+    min-height: 100%;
+}
+*/
